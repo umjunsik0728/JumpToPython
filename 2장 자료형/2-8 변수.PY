@@ -7,40 +7,49 @@
 # a = [1, 2, 3]
 
 # a = [1, 2, 3]
-# id(a)
+# print(id(a))
 
 # 리스트를 복사하고자 할 때
 # a = [1, 2, 3]
 # b = a
 
-# id(a)
-
-# id(b)
+# print(id(a))
+# print(id(b))
 
 # a[1] = 4
-# a
-# b
+# print(a)
+# print(b)
+
+# print(id(a))
+# print(id(b))
+
+
+
 
 # [:] 이용하기
 # a = [1, 2, 3]
 # b = a[:]
+
+# print(id(a))
+# print(id(b))
 # a[1] = 4
-# a
-# b
+# print(a)
+# print(b)
 
 # copy 모듈 이용하기
 # from copy import copy
-# a = [1, 2, 3]
+# a = 1
 # b = copy(a)
 
-# b is a
+# print(b is a)
 
 # 변수를 만드는 여러 가지 방법
 # a, b = ('python', 'life')
-
 # (a, b) = 'python', 'life'
 
-# [a, b] = ['python', 'life']
+[a, b] = ['python', 'life']
+print(a)
+print(b)
 
 # a = b = 'python'
 
