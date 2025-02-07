@@ -1,0 +1,123 @@
+# 모듈 만들기
+
+# # mod1.py
+# def add(a, b):
+#     return a + b
+
+# def sub(a, b): 
+#     return a-b
+
+# 모듈 불러오기
+
+# C:\Users\pahkey>cd C:\doit
+# C:\doit>dir
+# 2014-09-23 오후 01:53 49 mod1.py
+# C:\doit>python
+
+# import mod1
+# print(mod1.add(3, 4))
+# 7
+# print(mod1.sub(4, 2))
+
+# from mod1 import add
+# add(3, 4)
+
+
+# if __name__ == "__main__":의 의미
+
+# # mod1.py
+# def add(a, b): 
+#     return a+b
+
+# def sub(a, b): 
+#     return a-b
+
+# print(add(1, 4))
+# print(sub(4, 2))
+
+
+# C:\doit>python mod1.py
+# 5
+# 2
+
+# C:\Users\pahkey> cd C:\doit
+# C:\doit> python
+# >>> import mod1
+# 5
+# 2
+
+# # mod1.py
+# def add(a, b): 
+#     return a+b
+
+# def sub(a, b): 
+#     return a-b
+
+# if __name__ == "__main__":
+#     print(add(1, 4))
+#     print(sub(4, 2))
+
+# import mod1
+
+# # mod2.py
+# PI = 3.141592
+
+# class Math: 
+#     def solv(self, r): 
+#         return PI * (r ** 2) 
+
+# def add(a, b): 
+#     return a+b 
+
+# C:\Users\pahkey> cd C:\doit
+# C:\doit> python
+# import mod2
+# print(mod2.PI)
+
+# a = mod2.Math()
+# print(a.solv(2))
+
+# print(mod2.add(mod2.PI, 4.4))
+
+# 다른 파일에서 모듈 불러오기
+
+# # modtest.py
+# import mod2
+# result = mod2.add(3, 4)
+# print(result)
+
+# 다른 디렉터리에 있는 모듈을 불러오는 방법
+
+# C:\Users\pahkey>cd C:\doit
+# C:\doit>mkdir mymod
+# C:\doit>move mod2.py mymod
+#         1개 파일을 이동했습니다.
+
+# sys.path.append 사용하기
+
+# C:\doit>python
+# import sys
+
+# sys.path
+# ['', 'C:\\Windows\\SYSTEM32\\python311.zip', 'c:\\Python311\\DLLs', 
+# 'c:\\Python311\\lib', 'c:\\Python311', 'c:\\Python311\\lib\\site-packages']
+
+
+# sys.path.append("C:/doit/mymod")
+# sys.path
+# ['', 'C:\\Windows\\SYSTEM32\\python311.zip', 'c:\\Python311\\DLLs', 
+# 'c:\\Python311\\lib', 'c:\\Python311', 'c:\\Python311\\lib\\site-packages', 
+# 'C:/doit/mymod']
+
+# import mod2
+# print(mod2.add(3,4))
+
+# PYTHONPATH 환경 변수 사용하기
+
+# C:\doit>set PYTHONPATH=C:\doit\mymod
+# C:\doit>python
+# import mod2
+# print(mod2.add(3, 4))
+
+
+
